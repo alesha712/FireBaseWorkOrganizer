@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/shiftInfoDateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:paddingStart="12dp"
+        android:text="@string/shiftDate" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingEnd="1dp"
+        android:paddingStart="1dp"
+        android:text=":"
+        android:layout_toEndOf="@+id/shiftInfoDateTV"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/shiftInfoStartTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/textView3"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/startTV" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingEnd="2dp"
+        android:paddingStart="2dp"
+        android:text="-"
+        android:layout_toEndOf="@+id/shiftInfoStartTV"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/shiftInfoEndTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/textView4"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/endTV" />
+
+    <ImageView
+        android:id="@+id/shiftDoneIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:paddingEnd="12dp"
+        android:tint="@color/doneGreenColor"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+
+</RelativeLayout>

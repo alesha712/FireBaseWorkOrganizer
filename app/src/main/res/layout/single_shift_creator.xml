@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/singleShiftCont"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/shiftNameET"
+        style="@style/EditText.Login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="text|number"
+        android:maxLines="1"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:text="@string/firstShift"
+        android:textColor="@color/simple_white"
+        android:textColorHint="@color/hint_color"
+        android:textColorLink="@color/simple_white"
+        android:textSize="12sp"
+        android:theme="@style/EditText.Login" />
+
+    <TextView
+        android:id="@+id/startShiftTV"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/startShiftDefault"
+        android:textColor="@color/simple_white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/endShiftTV"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/endShiftDefault"
+        android:textColor="@color/simple_white"
+        android:textSize="12sp" />
+
+</LinearLayout>

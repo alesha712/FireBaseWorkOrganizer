@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:foregroundGravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="100dp"
+                    android:layout_height="130dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/hqs_blue" />
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/joinWorkName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:drawableStart="@drawable/ic_user_24dp"
+                    android:ems="10"
+                    android:hint="@string/workPlaceNameHint"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingStart="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorSeconderyDark"
+                    android:textColorLink="@color/colorSeconderyDark"
+                    android:textSize="12sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/joinWorkCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:drawableStart="@drawable/ic_dialpad_24dp"
+                    android:ems="10"
+                    android:hint="@string/workPlaceCode"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:paddingStart="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorSeconderyDark"
+                    android:textColorLink="@color/colorSeconderyDark"
+                    android:textSize="12sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <com.dx.dxloadingbutton.lib.LoadingButton
+                android:id="@+id/loadingJoinBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                app:lb_btnColor="@color/colorPrimary"
+                app:lb_btnDisabledColor="@color/blue_normal"
+                app:lb_btnRippleColor="@color/colorPrimaryDark"
+                app:lb_btnText="@string/joinBtn"
+                app:lb_resetAfterFailed="true"
+                app:lb_textColor="@color/colorText" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

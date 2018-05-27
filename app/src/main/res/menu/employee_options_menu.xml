@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/callEmployee"
+        android:title="@string/call" />
+
+    <item
+        android:id="@+id/send_SMS"
+        android:title="@string/send_sms" />
+
+    <item
+        android:id="@+id/say_hi"
+        android:title="@string/say_hi" />
+
+</menu>

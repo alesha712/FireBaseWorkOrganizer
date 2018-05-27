@@ -1,0 +1,169 @@
+<resources>
+    <string name="app_name">Work Organizer</string>
+
+    <!-- NAVIGATION BAR STRING -->
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+
+    <!-- NAVIGATION BAR STRING -->
+    <string name="popUpHeader">Choos whether join a work place or create a new one</string>
+    <string name="joinBtn">Join</string>
+    <string name="createBtn">Create</string>
+
+    <string name="WriteMessage">Write a meesage</string>
+    <string name="Send">Send</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_in">Sign In</string>
+    <string name="user_signed_out">User successfully signed out</string>
+    <string name="user_info">User Information</string>
+    <string name="name_hint">ex: John Dawe</string>
+    <string name="email">Email:</string>
+    <string name="email_hint">awesomApp@awesom.com</string>
+    <string name="phone">Phone Number:</string>
+    <string name="phone_hint">0555555555</string>
+    <string name="update_information">Update My Info</string>
+    <string name="update_password">Update My Password</string>
+    <string name="name_example">John Dawe</string>
+    <string name="current_password">Current Password:</string>
+    <string name="new_password">New Password:</string>
+    <string name="repeate_password">Repeate Password</string>
+    <string name="user_updated">User Info Updated</string>
+    <string name="password">Password:</string>
+    <string name="wrong_login_info">Wrong login information</string>
+    <string name="password_hint_symbols">********</string>
+    <string name="user_full_name">Full Name:</string>
+    <string name="birt_date">Birth Date:</string>
+    <string name="eror_updating_user">An error acquired, try again later</string>
+    <string name="all_fields_required">All fields are required</string>
+    <string name="password_required">Password is required</string>
+    <string name="enter_email">Enter your email:</string>
+    <string name="repeat_email">Repeat email:</string>
+    <string name="choose_password">Choose a password:</string>
+    <string name="repeat_password">Repeate password:</string>
+    <string name="date_hint">23/02/1990</string>
+    <string name="checkEmail">Check your email address</string>
+    <string name="checkPassword">Passwords doesnt match</string>
+    <string name="workPlaceNameHint">Work place name</string>
+    <string name="adminPassword">Choose an admin password</string>
+    <string name="repeatPassword">Repeat the password</string>
+    <string name="session_error">Error getting user info, try again later</string>
+    <string name="error_joining_place">Error! Check work info</string>
+    <string name="error_creating_workPlace">Error! Couldnt create work place, try again later</string>
+    <string name="workPlaceCreated">Work Place Created!</string>
+    <string name="passwordAtleast6">Password should contain more than 6 characters</string>
+    <string name="workPlaceCode">Work place unique code</string>
+    <string name="joinedSuccessfully">Work place added successfully</string>
+    <string name="photos">Photos</string>
+    <string name="employees">Employees</string>
+    <string name="myShifts">My Shifts</string>
+    <string name="workCodeForList">Work code:</string>
+    <string name="startDate">Start date</string>
+    <string name="endDate">End date</string>
+    <string name="firstShift">First shift:</string>
+    <string name="cancel">Cancel</string>
+    <string name="permissionRequiredForImages">Permission is required for using images</string>
+    <string name="call">Call</string>
+    <string name="send_sms">Send SMS</string>
+    <string name="say_hi">Say Hi ! </string>
+    <string name="callPermissionRequired">"Call permission is required"</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="workPlaceAlreadyExists">Work Place already exists in your list</string>
+    <string name="onlyAdminCanUseThisOption">Only Admin Can Use This Option</string>
+    <string name="alreadyAdmin">You already have admin options enabled</string>
+    <string name="submit">Submit</string>
+    <string name="share">Share:</string>
+
+
+    <!-- Welcome User Information STRINGS -->
+    <string name="friends">Work Friends</string>
+    <string name="workPlaces">Work Places</string>
+    <string name="totalShifts">Total Shifts</string>
+    <string name="nextShifts">Next Shifts</string>
+    <string name="noWorkPlacesYet">Add your first work place !</string>
+
+    <!-- Exception STRINGS -->
+
+    <!-- Shift STRINGS -->
+    <string name="role">Role: </string>
+    <string name="admin">Admin</string>
+    <string name="employee">Employee</string>
+    <string name="noNameYet">No Name Yet</string>
+    <string name="startShiftDefault">7:00</string>
+    <string name="endShiftDefault">15:00</string>
+    <string name="shift">Shift</string>
+    <string name="shiftNameIsRequired">Shift name is required</string>
+    <string name="shiftUpdated">Shift updated</string>
+    <string name="errorUpdatingShift">Error! Try again later</string>
+    <string name="newEmployee">New Employee Name</string>
+    <string name="errorSavingShift">Couldnt save shift, try again later.</string>
+    <string name="shiftSaved">Shifts saved successfully</string>
+
+    <!--workschedule fragment -->
+    <string name="workSchedules">Work Schedules:</string>
+    <string name="userShifts">All Shifts:</string>
+    <string name="lastShifts">Last Shifts:</string>
+    <string name="completedShifts">Completed Shifts:</string>
+    <string name="upComingShifts">Upcoming Shifts:</string>
+    <string name="noUpcomingShifts">No Upcoming Shifts.<br>\n</br>Are you out for a vacation?</string>
+
+    <!-- Default chanel id for firebase messaging  -->
+    <string name="default_notification_channel_id">HQS_ch_01</string>
+
+    <string name="schedulePublishedSuccess">Schedule was published successfully</string>
+    <string name="scheduleUpdatedSuccess">Schedule was updated successfully</string>
+    <string name="scheduleUpdatedError">Error updating schedule, try again later</string>
+    <string name="schedulePublishError">Error publishing schedule</string>
+    <string name="areYouSure">Are You Sure?</string>
+    <string name="areYouSureToPublish">Are you sure you wish to publish your schedule now?</string>
+    <string name="publishSchedule">Publish</string>
+    <string name="shiftDate">Shift Date</string>
+    <string name="startTV">Start</string>
+    <string name="endTV">End</string>
+
+    <!-- workPlace options menu  -->
+    <string name="leave">Leave Place</string>
+    <string name="leaveBtn">Leave</string>
+    <string name="stayBtn">Stay</string>
+    <string name="addAdmin">Add Admin</string>
+    <string name="becomeAdmin">Become Admin</string>
+    <string name="workImage">Change Image</string>
+    <string name="leavePlaceQuestion">By leaving a work place, all its content will no longer be available to you.<br>\n \n</br>Are you sure you want to leave it?</string>
+    <string name="workPlaceLeft">Work Place Left!</string>
+    <string name="adminPass">Admin Password</string>
+
+    <!-- chat  -->
+    <string name="you">You</string>
+    <string name="noChatMessages">No Chat Messages yet.<br>\n</br>Be the first to say HI !</string>
+
+    <!-- TODOLIST -->
+    <string name="importantHeader">Important</string>
+    <string name="regularHeader">TODO</string>
+    <string name="itemNameHint">ToDo item title</string>
+    <string name="itemDescription">Description</string>
+    <string name="itemImportant">Mark as Important</string>
+    <string name="itemRedString">#f44336</string>
+    <string name="itemGreenString">#4caf50</string>
+    <string name="itemBlueString">#2196f3</string>
+    <string name="itemPurpleString">#9c27b0</string>
+    <string name="itemOrangeString">#ff5722</string>
+    <string name="itemGreyString">#9E9E9E</string>
+    <string name="itemWhiteString">#ffffff</string>
+    <string name="edit">Edit</string>
+    <string name="markComplete">Mark as completed</string>
+    <string name="unmarkComplete">Unmark completed</string>
+    <string name="deleteTodoItem">Delete</string>
+    <string name="itemDeleted">Item was deleted successfully</string>
+    <string name="todoDeleteMessage">Are you sure you wish to delete this item?</string>
+    <string name="todoSaved">Item saved successfully</string>
+    <string name="todoError">Error, try again later</string>
+    <string name="onlyOriginalPublisher">Only the original publisher can do it</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+
+</resources>

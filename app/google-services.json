@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "800246381434",
+    "firebase_url": "https://mushlam-3fb1a.firebaseio.com",
+    "project_id": "mushlam-3fb1a",
+    "storage_bucket": "mushlam-3fb1a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:800246381434:android:7d85cd832f420603",
+        "android_client_info": {
+          "package_name": "com.hqs.alx.mushalmapp2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "800246381434-8pbltqouq38unoo9snrjjs12cr7f9q9f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hqs.alx.mushalmapp2",
+            "certificate_hash": "1dcd0c4c4a91e75e881ea4a514783e69b81e271d"
+          }
+        },
+        {
+          "client_id": "800246381434-oedcf863130ctt03rnareluas5au4bbo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaY7Uo-cKRQnuuIBsL0QFoRFuGYMVmlpM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "800246381434-oedcf863130ctt03rnareluas5au4bbo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

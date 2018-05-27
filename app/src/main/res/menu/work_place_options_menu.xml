@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/leaveWorkPlace"
+        android:title="@string/leave" />
+
+    <item
+        android:id="@+id/profileImage"
+        android:title="@string/workImage" />
+
+    <item
+        android:id="@+id/becomeAdmin"
+        android:title="@string/becomeAdmin" />
+</menu>

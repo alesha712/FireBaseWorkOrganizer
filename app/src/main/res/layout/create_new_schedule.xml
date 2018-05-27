@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/pop_up"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/closePopUpCreatorIV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="end"
+        android:layout_weight="1"
+        android:tint="@color/simple_white"
+        app:srcCompat="@drawable/ic_close_24dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/startDateTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_to_do_24dp"
+            android:drawableTint="@color/simple_white"
+            android:gravity="center_vertical"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:text="@string/startDate"
+            android:textColor="@color/hint_color" />
+
+        <TextView
+            android:id="@+id/endDateTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_to_do_24dp"
+            android:drawableTint="@color/simple_white"
+            android:gravity="center_vertical"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:text="@string/endDate"
+            android:textColor="@color/hint_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shiftCreatorContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/firstShiftET"
+                style="@style/EditText.Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text|number"
+                android:maxLines="1"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:text="@string/firstShift"
+                android:textColor="@color/simple_white"
+                android:textColorHint="@color/hint_color"
+                android:textColorLink="@color/simple_white"
+                android:textSize="12sp"
+                android:theme="@style/EditText.Login" />
+
+            <TextView
+                android:id="@+id/startFirstTV"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/startShiftDefault"
+                android:textColor="@color/simple_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/endFirstTV"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/endShiftDefault"
+                android:textColor="@color/simple_white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/addShiftIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="5dp"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+
+        <ImageView
+            android:id="@+id/deleteShiftIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+    </RelativeLayout>
+
+    <com.dx.dxloadingbutton.lib.LoadingButton
+        android:id="@+id/creatScheduleBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        app:lb_btnColor="#FFFFFF"
+        app:lb_btnDisabledColor="@color/blue_normal"
+        app:lb_btnRippleColor="@color/colorPrimaryDark"
+        app:lb_btnText="@string/createBtn"
+        app:lb_resetAfterFailed="true"
+        app:lb_textColor="@color/colorSeconderyDark" />
+
+
+</LinearLayout>
+

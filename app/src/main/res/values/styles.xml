@@ -1,0 +1,75 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Navigation Text Style -->
+
+    <!-- Welcome Fragment Headers Style -->
+    <style name="welcomHeadersTextStyle">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <!-- PopUp Header Style -->
+    <style name="myPopUpTextStyle">
+        <item name="android:textColor">@color/simple_white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <!-- WorkPlace CardView Style -->
+    <style name="myCardViewStyle">
+        <item name="android:textColor">#0069c0</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <!-- Schedule Fragment Header Style -->
+    <style name="scheduelFragmentHeader">
+        <item name="android:textColor">#0069c0</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <!-- SingleShift Day Header Style -->
+    <style name="myDayHeader">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <!-- Datepicker style -->
+    <style name="DatePickerTheme" parent="Theme.AppCompat.Light.Dialog.MinWidth">
+        <item name="colorAccent">#21cbe6</item>
+        <item name="colorControlActivated">#64ebf7</item>
+        <item name="colorControlHighlight">#00449d</item>
+    </style>
+
+    <style name="EditText.Login" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="colorAccent">@color/simple_white</item>
+        <item name="colorControlNormal">@color/simple_white</item>
+        <item name="colorControlActivated">@color/blue_normal</item>
+    </style>
+
+    <style name="noInfoToShow">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@drawable/pop_up"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/EditorShiftNameET"
+            style="@style/EditText.Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:text="@string/firstShift"
+            android:textColor="@color/simple_white"
+            android:textColorHint="@color/hint_color"
+            android:textColorLink="@color/simple_white"
+            android:textSize="12sp"
+            android:theme="@style/EditText.Login" />
+
+        <TextView
+            android:id="@+id/EditorStartShiftTV"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/startShiftDefault"
+            android:textColor="@color/simple_white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/EditorEndShiftTV"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/endShiftDefault"
+            android:textColor="@color/simple_white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/EditorEmployeeTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"></TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/editorAddEmployee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="5dp"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+
+        <ImageView
+            android:id="@+id/editorDeleteEmployee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.dx.dxloadingbutton.lib.LoadingButton
+            android:id="@+id/editorSaveShiftBtn"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            app:lb_btnColor="@color/simple_white"
+            app:lb_btnDisabledColor="@color/blue_normal"
+            app:lb_btnRippleColor="@color/colorPrimaryDark"
+            app:lb_btnText="@string/fui_button_text_save"
+            app:lb_resetAfterFailed="true"
+            app:lb_textColor="@color/colorPrimaryDark" />
+
+        <com.dx.dxloadingbutton.lib.LoadingButton
+            android:id="@+id/editorCancelBtn"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            app:lb_btnColor="@color/simple_white"
+            app:lb_btnDisabledColor="@color/blue_normal"
+            app:lb_btnRippleColor="@color/colorPrimaryDark"
+            app:lb_btnText="@string/cancel"
+            app:lb_resetAfterFailed="true"
+            app:lb_textColor="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

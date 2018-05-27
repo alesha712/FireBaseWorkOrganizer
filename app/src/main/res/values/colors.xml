@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196f3</color>
+    <color name="colorPrimaryDark">#0069c0</color>
+    <color name="colorAccent">#ab47bc</color>
+    <color name="colorSeconderyLight">#df78ef</color>
+    <color name="colorSeconderyDark">#6a1b9a</color>
+    <color name="colorPrimaryLight">#6ec6ff</color>
+
+    <color name="transparentBlack">#d9f5f5f5</color>
+    <color name="fullTransparent">#00ffffff</color>
+
+    <color name="colorPrimaryText">#212121</color>
+    <color name="seconderyText">#757575</color>
+    <color name="colorText">#FFFFFF</color>
+
+    <color name="bgBottomNavigation">#3d5069</color>
+
+    <color name="blue_normal">#33b5e5</color>
+    <color name="doneGreenColor">#4caf50</color>
+    <color name="notReadyRed">#f44336</color>
+    <color name="simple_white">#ffffff</color>
+
+    <color name="hint_color">#b7b4b4</color>
+    <color name="rowColor">#90caf9</color>
+
+    <color name="messageWrapperColor">#C2E7BD</color>
+
+    <!-- TO-Do Item Colors -->
+    <color name="itemRed">#f44336</color>
+    <color name="itemGreen">#4caf50</color>
+    <color name="ItemBlue">#2196f3</color>
+    <color name="itemPurple">#9c27b0</color>
+    <color name="itemOrange">#ff5722</color>
+    <color name="itemGrey">#9e9e9e</color>
+    <color name="itemWhite">#ffffff</color>
+
+</resources>

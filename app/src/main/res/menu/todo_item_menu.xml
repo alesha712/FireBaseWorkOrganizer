@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/edit"
+        android:title="@string/edit" />
+
+    <item
+        android:id="@+id/markComplete"
+        android:title="@string/markComplete" />
+
+    <item
+        android:id="@+id/unMarkComplete"
+        android:title="@string/unmarkComplete"/>
+
+    <item
+        android:id="@+id/deleteItem"
+        android:title="@string/deleteTodoItem"/>
+</menu>

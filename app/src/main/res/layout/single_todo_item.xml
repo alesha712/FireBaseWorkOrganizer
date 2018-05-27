@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="10dp"
+        tools:layout_editor_absoluteX="31dp">
+
+        <RelativeLayout
+            android:id="@+id/itemContainerRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/todoItemStarIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/todoItemOptionsIV"
+                android:padding="5dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_star_24dp" />
+
+            <TextView
+                android:id="@+id/todoItemHeaderTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="false"
+                android:layout_marginStart="5dp"
+                android:padding="2dp"
+                android:text="TODOITEM"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/todoListImageIncludeIV"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/todoItemHeaderTV"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_image_24dp" />
+
+            <TextView
+                android:id="@+id/todoItemTextTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/todoItemHeaderTV"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="10dp"
+                android:maxLines="5"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/todoItemPublisherTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/todoItemDateTV"
+                android:layout_alignBottom="@+id/todoItemDateTV"
+                android:layout_alignStart="@+id/todoItemTextTV"
+                android:layout_marginBottom="5dp"
+                android:text="Publisher" />
+
+            <TextView
+                android:id="@+id/todoItemDateTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/todoItemTextTV"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="20dp"
+                android:text="Date" />
+
+            <ImageView
+                android:id="@+id/todoItemOptionsIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:focusable="true"
+                android:padding="5dp"
+                app:srcCompat="@drawable/ic_more_vert_24dp" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

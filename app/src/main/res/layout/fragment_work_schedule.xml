@@ -1,0 +1,130 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hqs.alx.mushalmapp2.WorkScheduleFragment">
+
+    <ScrollView
+        android:id="@+id/scrolView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/scheduleLL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/scheduelFragmentHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/workSchedules" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="10dp"
+                tools:layout_editor_absoluteX="31dp" >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/allWorkSchedules"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/upComingTV"
+                style="@style/scheduelFragmentHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upComingShifts" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="10dp"
+                tools:layout_editor_absoluteX="31dp" >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/upComingShifts"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/scheduelFragmentHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lastShifts" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="10dp"
+                tools:layout_editor_absoluteX="31dp" >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/userAllShifts"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/savedShiftsTV"
+                style="@style/scheduelFragmentHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/completedShifts" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="10dp"
+                tools:layout_editor_absoluteX="31dp" >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/userSavedShifts"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/newScheduleBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
+        app:layout_anchor="@id/scrolView"
+        app:layout_anchorGravity="bottom|right|end" />
+
+    <com.tt.whorlviewlibrary.WhorlView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scheduleWhorlProgress"
+        app:layout_anchor="@id/textView"
+        app:layout_anchorGravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="12dp"
+        app:whorlview_circle_colors="#ab47bc_#6ec6ff_#df78ef_#2196f3_#df78ef"
+        app:whorlview_circle_speed="360"
+        app:whorlview_parallax="fast"
+        app:whorlview_strokeWidth="20"
+        app:whorlview_sweepAngle="90">
+    </com.tt.whorlviewlibrary.WhorlView>
+
+
+</android.support.design.widget.CoordinatorLayout>
