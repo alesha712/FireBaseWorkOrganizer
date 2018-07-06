@@ -72,4 +72,9 @@
         <item name="android:padding">5dp</item>
     </style>
 
+    <style name="salaryHeaders">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
 </resources>

@@ -15,5 +15,5 @@
 
     <item
         android:id="@+id/deleteItem"
-        android:title="@string/deleteTodoItem"/>
+        android:title="@string/deleteItem"/>
 </menu>

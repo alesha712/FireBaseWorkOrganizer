@@ -9,13 +9,17 @@ import android.os.Bundle;
 import android.app.Fragment;
 import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -75,6 +79,10 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 loadingButton.startLoading();
+                //hiding keyBoard
+                InputMethodManager in = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                in.hideSoftInputFromWindow(getActivity().getCurrentFocus().getApplicationWindowToken(), 0);
+
                 String email = userEmail.getText().toString().trim();
                 String password = userPassword.getText().toString().trim();
                 if(email.isEmpty() || password.isEmpty()){
@@ -181,5 +189,17 @@ public class LoginFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
+
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        MenuItem item = menu.findItem(R.id.menu_settings);
+        item.setVisible(false);
     }
 }

@@ -92,6 +92,8 @@ public class WorkScheduleFragment extends Fragment {
 
     public WorkPlaces currentWorkPlace;
 
+    private TextView noSchedulesTV, noUpcomingTV, noLastTv, noSavedTV;
+
     String user_uid;
     FloatingActionButton addNewScheduleBtn;
     private RecyclerView allWorkSchedulesRecycler, userAllShifts, userUpcomingShifts, completedShifts;
@@ -128,6 +130,11 @@ public class WorkScheduleFragment extends Fragment {
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_work_schedule, container, false);
+
+        noLastTv = (TextView) view.findViewById(R.id.noLastShiftsTV);
+        noSavedTV = (TextView) view.findViewById(R.id.noSavedShiftsTV);
+        noSchedulesTV = (TextView) view.findViewById(R.id.noSchedulesTV);
+        noUpcomingTV = (TextView) view.findViewById(R.id.noUpcomingShiftsTV);
 
         addNewScheduleBtn = (FloatingActionButton) view.findViewById(R.id.newScheduleBtn);
         allWorkSchedulesRecycler = (RecyclerView) view.findViewById(R.id.allWorkSchedules);
@@ -170,6 +177,11 @@ public class WorkScheduleFragment extends Fragment {
                     .child(workCode).child(workName);
 
             savedShifts = (ArrayList<ShiftInfoForUsers>) ShiftInfoForUsers.listAll(ShiftInfoForUsers.class);
+            if(savedShifts.size() == 0)
+                noSavedTV.setVisibility(View.VISIBLE);
+            else
+                noSavedTV.setVisibility(View.GONE);
+
             //RecyclerView for complete Shifts
             LinearLayoutManager mLayoutManagerComplete = new LinearLayoutManager(getActivity());
             mLayoutManagerComplete.setReverseLayout(false);
@@ -197,6 +209,7 @@ public class WorkScheduleFragment extends Fragment {
                         }
 
                         if(allFireBaseSchedules.size() != 0 ){
+                            noSchedulesTV.setVisibility(View.GONE);
                             getShiftsFromLast2Schedules(allFireBaseSchedules);
                             LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
                             mLayoutManager.setReverseLayout(true);
@@ -208,6 +221,8 @@ public class WorkScheduleFragment extends Fragment {
                             MyAllPlaceSchedulesRecyclerAdapter allPlaceSchedulesRecyclerAdapter = new MyAllPlaceSchedulesRecyclerAdapter(getActivity(),
                                     allFireBaseSchedules);
                             allWorkSchedulesRecycler.setAdapter(allPlaceSchedulesRecyclerAdapter);
+                        }else{
+                            noSchedulesTV.setVisibility(View.VISIBLE);
                         }
                     }else{
                         whorlView.stop();
@@ -224,6 +239,13 @@ public class WorkScheduleFragment extends Fragment {
 
             current_work_reference.child(FireBaseConstants.CHILD_WORKSCHEDULE).addValueEventListener(currentWorkEventListener);
 
+            (view.findViewById(R.id.savedShiftsTV)).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent("com.hqs.alx.mushalmapp2.SAVED_SHIFTS");
+                    getActivity().sendBroadcast(intent);
+                }
+            });
 
         }
 
@@ -275,6 +297,16 @@ public class WorkScheduleFragment extends Fragment {
 
                 Log.d("upComingShifts", " upComingShifts SIZE: " + upComingShifts.size());
 
+                if(lastThirtyUserShifts.size() ==0)
+                    noLastTv.setVisibility(View.VISIBLE);
+                else
+                    noLastTv.setVisibility(View.GONE);
+
+                if(upComingShifts.size() == 0)
+                    noUpcomingTV.setVisibility(View.VISIBLE);
+                else
+                    noUpcomingTV.setVisibility(View.GONE);
+
                 //sort the upcomoming shifts by date - the closest one will be the first
                 Collections.sort(upComingShifts);
 
@@ -313,6 +345,7 @@ public class WorkScheduleFragment extends Fragment {
 
             }
         });
+
     }
 
     public void createNewSchedulePopUp(){
@@ -595,10 +628,32 @@ public class WorkScheduleFragment extends Fragment {
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
             if(action.equals("com.hqs.alx.mushalmapp2.SHIFT_SAVED")){
+                noSavedTV.setVisibility(View.GONE);
                 ShiftInfoForUsers shift = intent.getParcelableExtra("shiftSaved");
+                String startTime = shift.getStart();
+                String endTime = shift.getEnd();
+
+                SimpleDateFormat format = new SimpleDateFormat("HH:mm");
+                Date date1 = null;
+                Date date2 = null;
+                try {
+                    date1 = format.parse(startTime);
+                    date2 = format.parse(endTime);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                long duration = (date2.getTime() - date1.getTime()) / (60 * 60 * 1000) % 24;
+                if(duration < 0)
+                    duration = duration + 24;
+
+                shift.setDuration(duration);
+                shift.setDone(true);
                 shift.save();
+
                 Toast.makeText(context, context.getResources().getString(R.string.shiftSaved), Toast.LENGTH_SHORT).show();
                 savedShifts = (ArrayList<ShiftInfoForUsers>) ShiftInfoForUsers.listAll(ShiftInfoForUsers.class);
+                Collections.sort(savedShifts);
                 //RecyclerView for complete Shifts
                 MyRecentShiftsAdapter userCompleteShiftsAdaptesr = new MyRecentShiftsAdapter(getActivity(), savedShifts);
                 completedShifts.setAdapter(userCompleteShiftsAdaptesr);

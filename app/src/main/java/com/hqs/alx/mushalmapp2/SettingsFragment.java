@@ -48,16 +48,11 @@ public class SettingsFragment extends Fragment {
 
     Button signOutBtn;
     TextView userNameHeadTV;
-    EditText userFullNameET;
-    EditText userEmailET;
-    EditText userPhoneET;
-    EditText userPassForAuth;
-    EditText birthET;
+    EditText userFullNameET, userEmailET, userPhoneET, userPassForAuth, birthET;
+
     DatePickerDialog datePickerDialog;
 
-    EditText userCurrentPassET;
-    EditText userNewPassET;
-    EditText userRepeatNewPassET;
+    EditText userCurrentPassET, userNewPassET, userRepeatNewPassET;
 
     FirebaseAuth myFirebaseAuth;
     FirebaseDatabase myFirebaseDatabase;
@@ -214,6 +209,54 @@ public class SettingsFragment extends Fragment {
 
                 }
 
+            }
+        });
+
+        (view.findViewById(R.id.updatePasswordBtn)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(userCurrentPassET.getText().toString().trim().isEmpty() || userNewPassET.getText().toString().trim().isEmpty()
+                                                                            || userRepeatNewPassET.getText().toString().trim().isEmpty()){
+                    Toast.makeText(getActivity(), getResources().getString(R.string.all_fields_required), Toast.LENGTH_SHORT).show();
+                }else{
+                    final String newPass = userNewPassET.getText().toString().trim();
+                    String repeatNew = userRepeatNewPassET.getText().toString().trim();
+
+                    String pass = userCurrentPassET.getText().toString().trim();
+                    String email = myFirebaseUser.getEmail();
+
+                    if(email != null){
+                        if(newPass.equals(repeatNew)){
+                            AuthCredential credential = EmailAuthProvider.getCredential(email,pass);
+
+                            myFirebaseUser.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if(task.isSuccessful()){
+                                        myFirebaseUser.updatePassword(newPass).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if(task.isSuccessful()){
+                                                    Toast.makeText(getActivity(), getResources().getString(R.string.passwordUpdated), Toast.LENGTH_SHORT).show();
+                                                    userCurrentPassET.setText("");
+                                                    userNewPassET.setText("");
+                                                    userRepeatNewPassET.setText("");
+                                                }else{
+                                                    Toast.makeText(getActivity(), getResources().getString(R.string.errorUpdatingInfo), Toast.LENGTH_SHORT).show();
+                                                }
+                                            }
+                                        });
+                                    }else{
+                                        Toast.makeText(getActivity(), getResources().getString(R.string.wrongPassword), Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                        }else
+                            Toast.makeText(getActivity(), getResources().getString(R.string.checkPassword), Toast.LENGTH_SHORT).show();
+                    }
+
+
+                }
             }
         });
 

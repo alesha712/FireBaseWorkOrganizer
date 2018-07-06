@@ -592,7 +592,6 @@ public class WelcomeFragment extends Fragment {
                 }else{
                     Toast.makeText(getActivity(), getResources().getString(R.string.checkPassword), Toast.LENGTH_SHORT).show();
                     createBtn.loadingFailed();
-                    createBtn.reset();
                 }
             }
         });

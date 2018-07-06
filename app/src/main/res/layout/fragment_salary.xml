@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hqs.alx.mushalmapp2.SalaryFragment">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/monthScheduleRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:id="@+id/totalShiftsHeader"
+                style="@style/salaryHeaders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/totalShiftsHeader"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/totalShiftsNumTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_toEndOf="@+id/totalShiftsHeader"
+                android:text="@string/zero"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/salaryHeader"
+                style="@style/salaryHeaders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/totalShiftsHeader"
+                android:text="@string/salaryHeader"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/salaryNumTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/totalShiftsNumTV"
+                android:layout_margin="5dp"
+                android:layout_toEndOf="@+id/salaryHeader"
+                android:text="@string/zero"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:id="@+id/totalHourssHeader"
+                style="@style/salaryHeaders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/totalHoursHeader" />
+
+            <TextView
+                android:id="@+id/totalHoursNumTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_toEndOf="@+id/totalHourssHeader"
+                android:text="@string/zero"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/totalSalaryHeader"
+                style="@style/salaryHeaders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/totalHourssHeader"
+                android:text="@string/earningHeader" />
+
+            <TextView
+                android:id="@+id/totalSalaryNumTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/totalHoursNumTV"
+                android:layout_margin="5dp"
+                android:layout_toEndOf="@+id/totalSalaryHeader"
+                android:text="@string/zero"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noSavedShiftsTV"
+        style="@style/noInfoToShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="25dp"
+        android:text="@string/noSavedShifts" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/shiftByMonthRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</LinearLayout>

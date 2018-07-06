@@ -109,7 +109,7 @@
                 app:lb_btnColor="@color/colorPrimary"
                 app:lb_btnDisabledColor="@color/blue_normal"
                 app:lb_btnRippleColor="@color/colorPrimaryDark"
-                app:lb_btnText="@string/joinBtn"
+                app:lb_btnText="@string/createBtn"
                 app:lb_resetAfterFailed="true"
                 app:lb_textColor="@color/colorText" />
 

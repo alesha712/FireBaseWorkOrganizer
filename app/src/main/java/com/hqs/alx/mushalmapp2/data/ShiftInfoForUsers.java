@@ -26,11 +26,14 @@ public class ShiftInfoForUsers extends SugarRecord implements Comparable<ShiftIn
     private boolean done;
     private String notice;
     private ArrayList<EmployeeForShift> employees;
-    private String schedulePeriod;
+    private String startSchedule;
+    private String endSchedule;
+    private double duration;
 
     public ShiftInfoForUsers(){}
 
-    public ShiftInfoForUsers(String date, String day, String start, String end, boolean done, String notice, ArrayList<EmployeeForShift> employees, String schedulePeriod) {
+    public ShiftInfoForUsers(String date, String day, String start, String end, boolean done,
+                             String notice, ArrayList<EmployeeForShift> employees, String startSchedule, String endSchedule, double duration) {
         this.date = date;
         this.day = day;
         this.start = start;
@@ -38,7 +41,9 @@ public class ShiftInfoForUsers extends SugarRecord implements Comparable<ShiftIn
         this.done = done;
         this.notice = notice;
         this.employees = employees;
-        this.schedulePeriod = schedulePeriod;
+        this.startSchedule = startSchedule;
+        this.endSchedule = endSchedule;
+        this.duration = duration;
     }
 
     protected ShiftInfoForUsers(Parcel in) {
@@ -49,7 +54,9 @@ public class ShiftInfoForUsers extends SugarRecord implements Comparable<ShiftIn
         done = in.readByte() != 0;
         notice = in.readString();
         employees = in.createTypedArrayList(EmployeeForShift.CREATOR);
-        schedulePeriod = in.readString();
+        startSchedule = in.readString();
+        endSchedule = in.readString();
+        duration = in.readDouble();
     }
 
     public static final Creator<ShiftInfoForUsers> CREATOR = new Creator<ShiftInfoForUsers>() {
@@ -120,12 +127,28 @@ public class ShiftInfoForUsers extends SugarRecord implements Comparable<ShiftIn
         this.employees = employees;
     }
 
-    public String getSchedulePeriod() {
-        return schedulePeriod;
+    public String getStartSchedule() {
+        return startSchedule;
     }
 
-    public void setSchedulePeriod(String schedulePeriod) {
-        this.schedulePeriod = schedulePeriod;
+    public void setStartSchedule(String startSchedule) {
+        this.startSchedule = startSchedule;
+    }
+
+    public String getEndSchedule() {
+        return endSchedule;
+    }
+
+    public void setEndSchedule(String endSchedule) {
+        this.endSchedule = endSchedule;
+    }
+
+    public double getDuration() {
+        return duration;
+    }
+
+    public void setDuration(double duration) {
+        this.duration = duration;
     }
 
     @Override
@@ -162,6 +185,8 @@ public class ShiftInfoForUsers extends SugarRecord implements Comparable<ShiftIn
         dest.writeByte((byte) (done ? 1 : 0));
         dest.writeString(notice);
         dest.writeTypedList(employees);
-        dest.writeString(schedulePeriod);
+        dest.writeString(startSchedule);
+        dest.writeString(endSchedule);
+        dest.writeDouble(duration);
     }
 }

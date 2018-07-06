@@ -305,11 +305,12 @@ public class MyWorkScheduleRecyclerAdapter extends RecyclerView.Adapter<MyWorkSc
                                         if(e.getUid().equals(allEmployeesFromWorkDB.get(i).getUid())){
                                             String fireBaseDateString = currentScheduleShifts.get(j).getDate().replace("/", "-");
 
+
                                             ShiftInfoForUsers shiftInfoForUsers = new ShiftInfoForUsers(fireBaseDateString,
                                                     currentScheduleShifts.get(j).getDay(),
                                                     currentScheduleShifts.get(j).getStart(),
                                                     currentScheduleShifts.get(j).getEnd(),
-                                                    false, null, currentScheduleShifts.get(j).getEmployee(), schedulePeriod);
+                                                    false, null, currentScheduleShifts.get(j).getEmployee(), startSchedule, endSchedule, 0);
                                             userShifts.add(shiftInfoForUsers);
                                         }
                                     }

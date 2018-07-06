@@ -1,9 +1,13 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.hqs.alx.mushalmapp2.SettingsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,17 +60,18 @@
 
             <com.github.florent37.expansionpanel.ExpansionLayout
                 android:id="@+id/expansionLayout"
-                app:expansion_expanded="false"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent">
+                app:expansion_expanded="false">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_height="wrap_content"
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <TextView
@@ -89,8 +94,8 @@
 
                     <LinearLayout
                         android:id="@+id/userEmailContainer"
-                        android:layout_height="wrap_content"
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <TextView
@@ -113,9 +118,9 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_alignBottom="@id/userEmailContainer"
-                        android:layout_height="wrap_content"
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/userEmailContainer"
                         android:orientation="horizontal">
 
                         <TextView
@@ -138,9 +143,9 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_alignBottom="@id/userEmailContainer"
-                        android:layout_height="wrap_content"
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/userEmailContainer"
                         android:orientation="horizontal">
 
                         <TextView
@@ -313,19 +318,24 @@
                     </LinearLayout>
 
                     <Button
+                        android:id="@+id/updatePasswordBtn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/update_password" />
                 </LinearLayout>
             </com.github.florent37.expansionpanel.ExpansionLayout>
 
-            <Button
-                android:id="@+id/signOutBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
 
         </LinearLayout>
 
-</ScrollView>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/signOutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/log_out" />
+
+</RelativeLayout>

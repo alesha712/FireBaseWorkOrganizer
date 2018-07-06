@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical">
+
+    <com.github.florent37.expansionpanel.ExpansionHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        app:expansion_headerIndicator="@id/headerIndicator"
+        app:expansion_layout="@id/expansionLayout"
+        app:expansion_toggleOnClick="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@android:color/white"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/shiftSalaryDateTV"
+                style="@style/salaryHeaders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/shiftSalaryTimeTV"
+                style="@style/salaryHeaders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/shiftSalaryDateTV"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/shiftSalaryEarningsTV"
+                style="@style/salaryHeaders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/headerIndicator"
+                android:text="TextView" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/headerIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+        </RelativeLayout>
+
+    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+    <com.github.florent37.expansionpanel.ExpansionLayout
+        android:id="@+id/expansionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:expansion_expanded="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/shiftCommentsET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:ems="10"
+                    android:hint="@string/commentsHint"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:maxLines="3"
+                    android:minLines="3"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorSeconderyDark"
+                    android:textColorLink="@color/colorSeconderyDark"
+                    android:textSize="12sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/durationET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:ems="10"
+                    android:hint="@string/shiftDuration"
+                    android:imeOptions="actionDone"
+                    android:inputType="number|numberDecimal"
+                    android:maxLines="1"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorSeconderyDark"
+                    android:textColorLink="@color/colorSeconderyDark"
+                    android:textSize="12sp" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+            <com.dx.dxloadingbutton.lib.LoadingButton
+                android:id="@+id/updateSavedShiftBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                app:lb_btnColor="@color/colorPrimary"
+                app:lb_btnDisabledColor="@color/blue_normal"
+                app:lb_btnRippleColor="@color/colorPrimaryDark"
+                app:lb_btnText="@string/submit"
+                app:lb_resetAfterFailed="true"
+                app:lb_textColor="@color/colorText" />
+
+        </LinearLayout>
+    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+</LinearLayout>

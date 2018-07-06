@@ -13,16 +13,16 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_weight="1"
+        android:dropDownAnchor="@id/EditorSingleEmployeeLayout"
+        android:dropDownHeight="100dp"
+        android:dropDownVerticalOffset="75dp"
+        android:dropDownWidth="wrap_content"
         android:gravity="center"
         android:inputType="textAutoComplete"
         android:paddingEnd="8dp"
         android:paddingStart="8dp"
         android:textColor="@color/simple_white"
         android:textSize="12sp"
-        android:dropDownAnchor="@id/EditorSingleEmployeeLayout"
-        android:dropDownVerticalOffset="75dp"
-        android:dropDownHeight="100dp"
-        android:dropDownWidth="wrap_content"
         android:theme="@style/EditText.Login" />
 
 </RelativeLayout>

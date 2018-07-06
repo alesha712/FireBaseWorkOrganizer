@@ -88,6 +88,7 @@ public class MyToDOListAdapter extends RecyclerView.Adapter<MyToDOListAdapter.My
 
         public void bindData(final ToDoItem currentItem, final int position){
 
+            final ImageView doneIV = (ImageView) itemView.findViewById(R.id.itemCompletedIV);
             ImageView itemStar = (ImageView) itemView.findViewById(R.id.todoItemStarIV);
             TextView itemHeader = (TextView) itemView.findViewById(R.id.todoItemHeaderTV);
             ImageView imageIncluded = (ImageView) itemView.findViewById(R.id.todoListImageIncludeIV);
@@ -102,6 +103,11 @@ public class MyToDOListAdapter extends RecyclerView.Adapter<MyToDOListAdapter.My
             todoItemPublisherTV.setText(currentItem.getPublisherName());
             todoItemDateTV.setText(currentItem.getDate());
             String color = currentItem.getColor();
+
+            if(currentItem.isComplete()){
+                doneIV.setVisibility(View.VISIBLE);
+            }else
+                doneIV.setVisibility(View.GONE);
 
             if(!color.equals("") && color != null)
                 container.setBackgroundColor(Color.parseColor(color));
@@ -147,6 +153,7 @@ public class MyToDOListAdapter extends RecyclerView.Adapter<MyToDOListAdapter.My
                                     break;
                                 case R.id.markComplete:
                                     currentItem.setComplete(true);
+                                    doneIV.setVisibility(View.VISIBLE);
                                     currentItem.setCompleteBy(currentUser.getFirebaseUID());
                                     work_reference.child(currentItem.getKeyRef()).setValue(currentItem);
                                     allItems.remove(position);
@@ -155,10 +162,11 @@ public class MyToDOListAdapter extends RecyclerView.Adapter<MyToDOListAdapter.My
                                     break;
                                 case R.id.unMarkComplete:
                                     currentItem.setComplete(false);
+                                    doneIV.setVisibility(View.GONE);
                                     currentItem.setCompleteBy(null);
                                     work_reference.child(currentItem.getKeyRef()).setValue(currentItem);
                                     allItems.remove(position);
-                                    allItems.add(allItems.size()-1 , currentItem);
+                                    allItems.add(allItems.size() , currentItem);
                                     notifyDataSetChanged();
                                     break;
                                 case R.id.deleteItem:

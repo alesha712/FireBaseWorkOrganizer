@@ -10,6 +10,7 @@
     <string name="joinBtn">Join</string>
     <string name="createBtn">Create</string>
 
+    <string name="save">Save</string>
     <string name="WriteMessage">Write a meesage</string>
     <string name="Send">Send</string>
     <string name="sign_up">Sign Up</string>
@@ -74,6 +75,9 @@
     <string name="alreadyAdmin">You already have admin options enabled</string>
     <string name="submit">Submit</string>
     <string name="share">Share:</string>
+    <string name="passwordUpdated">Password Updated Successfully</string>
+    <string name="errorUpdatingInfo">Error updating info, try again later</string>
+    <string name="wrongPassword">Wrong password, try again.</string>
 
 
     <!-- Welcome User Information STRINGS -->
@@ -121,6 +125,10 @@
     <string name="shiftDate">Shift Date</string>
     <string name="startTV">Start</string>
     <string name="endTV">End</string>
+    <string name="noSchedules">No schedules to show</string>
+    <string name="noUpComingShifts">No upcoming shifts - are you on a vacation?</string>
+    <string name="noLastShifts">No shifts in the last 30 days</string>
+    <string name="noSavedShits">You haven saved any shifts, press the + button to save one</string>
 
     <!-- workPlace options menu  -->
     <string name="leave">Leave Place</string>
@@ -153,16 +161,31 @@
     <string name="edit">Edit</string>
     <string name="markComplete">Mark as completed</string>
     <string name="unmarkComplete">Unmark completed</string>
-    <string name="deleteTodoItem">Delete</string>
+    <string name="deleteItem">Delete</string>
     <string name="itemDeleted">Item was deleted successfully</string>
     <string name="todoDeleteMessage">Are you sure you wish to delete this item?</string>
     <string name="todoSaved">Item saved successfully</string>
     <string name="todoError">Error, try again later</string>
     <string name="onlyOriginalPublisher">Only the original publisher can do it</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- salaryFragment -->
+    <string name="totalShiftsHeader">Total Shifts:</string>
+    <string name="salaryHeader">Salary per hour:</string>
+    <string name="totalHoursHeader">Total hours:</string>
+    <string name="earningHeader">Earnings:</string>
+    <string name="commentsHint">Comments</string>
+    <string name="salaryPerHourMenuItem">Hour Value</string>
+    <string name="shiftDuration">Shift Duration:</string>
+    <string name="noSavedShifts">No shifts to show. Go back and save a shift.</string>
+    <string name="zero"> - 0 - </string>
 
+    <string name="currency_prompt">Choose currency</string>
+    <string name="log_out">Log Out</string>
+    <string-array name="currency_array">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>NIS</item>
+    </string-array>
 
 
 

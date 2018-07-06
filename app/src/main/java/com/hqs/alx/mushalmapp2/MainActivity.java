@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements FragmentChanger {
     ScheduleViewerFragment scheduleViewerFragment;
     EmployeesListFragment employeeListFragment;
     ToDOFragment toDOFragment;
+    SalaryFragment salaryFragment;
 
     boolean isWelcomeFragVisible = true;
 
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements FragmentChanger {
         workScheduleFragment  = new WorkScheduleFragment();
         scheduleViewerFragment = new ScheduleViewerFragment();
         toDOFragment = new ToDOFragment();
+        salaryFragment = new SalaryFragment();
 
         current_user_db = FirebaseDatabase.getInstance().getReference();
         myFirebaseAuth = FirebaseAuth.getInstance();
@@ -151,6 +153,7 @@ public class MainActivity extends AppCompatActivity implements FragmentChanger {
         intentFilter.addAction("com.hqs.alx.mushalmapp2.NEW_USER_INFO");
         intentFilter.addAction("com.hqs.alx.mushalmapp2.SCHEDULEVIEWER");
         intentFilter.addAction("com.hqs.alx.mushalmapp2.GO_TO_TODOLIST");
+        intentFilter.addAction("com.hqs.alx.mushalmapp2.SAVED_SHIFTS");
 
         MainActivity.this.registerReceiver(myBroadCastReceiver, intentFilter);
     }
@@ -282,6 +285,8 @@ public class MainActivity extends AppCompatActivity implements FragmentChanger {
             }else if(action.equals("com.hqs.alx.mushalmapp2.GO_TO_TODOLIST")){
                 toDOFragment.currentUser = intent.getParcelableExtra("currentUser");
                 getFragmentManager().beginTransaction().addToBackStack("goToTODOList").replace(R.id.MymainLayout, toDOFragment).commit();
+            }else if(action.equals("com.hqs.alx.mushalmapp2.SAVED_SHIFTS")){
+                getFragmentManager().beginTransaction().addToBackStack("goToSalary").replace(R.id.MymainLayout, salaryFragment).commit();
             }
 
         }

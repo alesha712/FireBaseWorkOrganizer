@@ -30,6 +30,14 @@
                 app:cardCornerRadius="10dp"
                 tools:layout_editor_absoluteX="31dp" >
 
+                <TextView
+                    android:id="@+id/noSchedulesTV"
+                    style="@style/noInfoToShow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/noSchedules" />
+
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/allWorkSchedules"
                     android:layout_width="match_parent"
@@ -49,6 +57,14 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="10dp"
                 tools:layout_editor_absoluteX="31dp" >
+
+                <TextView
+                    android:id="@+id/noUpcomingShiftsTV"
+                    style="@style/noInfoToShow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/noUpComingShifts" />
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/upComingShifts"
@@ -70,6 +86,14 @@
                 app:cardCornerRadius="10dp"
                 tools:layout_editor_absoluteX="31dp" >
 
+                <TextView
+                    android:id="@+id/noLastShiftsTV"
+                    style="@style/noInfoToShow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/noLastShifts" />
+
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/userAllShifts"
                     android:layout_width="match_parent"
@@ -89,6 +113,14 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="10dp"
                 tools:layout_editor_absoluteX="31dp" >
+
+                <TextView
+                    android:id="@+id/noSavedShiftsTV"
+                    style="@style/noInfoToShow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/noSavedShits" />
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/userSavedShifts"
